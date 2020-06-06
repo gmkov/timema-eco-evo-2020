@@ -1,0 +1,139 @@
+plant_id	plant id
+plant_sp	plant species
+bushsize	length X width X height in inches
+lat	latitude DDS
+long	longitude DDS
+dummy	ignore
+art_id	unique arthropod id. first 3 areplant id, "t" indicates Timema
+morpho	unique morphospecies name
+order	
+family	
+length	arthropod length in mm, all body parts. designed to be "length visible to birds" 
+weight	weight
+color	for timema only, g = green, s = striped, r = red (melanic), b = beige
+is	ignore this column. from here down these are all derived fields. I would use statistical computing to do all this work.
+is_4	is an arthropod >= 4 mm
+is_5	5 mm
+is_6	6 mm
+is_7	
+is_8	
+is_9	
+is_10	
+is_tim	is a Timema
+is_g_tim	is a green Timema
+is_s_tim	
+is_r_tim	
+is_tim_4	is a Timema >= 4mm
+is_tim_5	
+is_tim_6	
+is_tim_7	
+is_tim_8	
+is_tim_9	
+is_tim_10	
+is_art	is a non-Timema arthropod
+is_art_4	
+is_art_5	
+is_art_6	
+is_art_7	
+is_art_8	
+is_art_9	
+is_art_10	
+is_herbivore	is an herbivore (best guess, basically not carnivore), Timema included
+is_herb_4	
+is_herb_5	
+is_herb_6	
+is_herb_7	
+is_herb_8	
+is_herb_9	
+is_herb_10	
+is_art_herbivore	is an herbivore, Timema excluded
+is_art_herb_4	
+is_art_herb_5	
+is_art_herb_6	
+is_art_herb_7	
+is_art_herb_8	
+is_art_herb_9	
+is_art_herb_10	
+is_carnivore	is a carnivore (best guess)
+is_carn_4	
+is_carn_5	
+is_carn_6	
+is_carn_7	
+is_carn_8	
+is_carn_9	
+is_carn_10	
+is_lepidop	is a lepiopteran (mostly caterpillars)
+is_lep_4	
+is_lep_5	
+is_lep_6	
+is_lep_7	
+is_lep_8	
+is_lep_9	
+is_lep_10	
+no_any	part of sheet designed to calculate number of individuals on a plant. ignore all this. use pivtot tables or statistical computing.
+no_any_4	
+no_any_5	
+no_any_6	
+no_any_7	
+no_any_8	
+no_any_9	
+no_any_10	
+no_tim	
+no_grn_tim	
+no_str_tim	
+no_red_tim	
+no_tim_4	
+no_tim_5	
+no_tim_6	
+no_tim_7	
+no_tim_8	
+no_tim_9	
+no_tim_10	
+no_art	
+no_art_4	
+no_art_5	
+no_art_6	
+no_art_7	
+no_art_8	
+no_art_9	
+no_art_10	
+no_herb	
+no_herb_4	
+no_herb_5	
+no_herb_6	
+no_herb_7	
+no_herb_8	
+no_herb_9	
+no_herb_10	
+no_art_herb	
+no_art_herb_4	
+no_art_herb_5	
+no_art_herb_6	
+no_art_herb_7	
+no_art_herb_8	
+no_art_herb_9	
+no_art_herb_10	
+no_carn	
+no_carn_4	
+no_carn_5	
+no_carn_6	
+no_carn_7	
+no_carn_8	
+no_carn_9	
+no_carn_10	
+no_lep	
+no_lep_4	
+no_lep_5	
+no_lep_6	
+no_lep_7	
+no_lep_8	
+no_lep_9	
+no_lep_10	
+rich_art	part of sheet designed to calculate the species richness on a plant.
+rich_art_4	
+rich_art_5	
+rich_art_6	
+rich_art_7	
+rich_art_8	
+rich_art_9	
+rich_art_10	

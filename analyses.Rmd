@@ -15,7 +15,7 @@ output:
 # tinytex::install_tinytex()
 # tinytex::tlmgr_update()  # update LaTeX packages
 #tinytex::reinstall_tinytex(force = TRUE)
-# setwd("~/Dropbox/PhD/PAPERS/3_n1_tim/sub.EE/timema-eco-evo-2020/")
+setwd("~/Dropbox/git/timema-eco-evo-2020/")
 library(plotrix)
 # all arthropod data 
 ad <- read.csv( "data/all_art_n1_data2013.csv", colClasses=c(plant_id = "factor"))
@@ -35,7 +35,7 @@ cnd.raw$id <- as.factor(ifelse(nchar(cnd.raw$id) == 1, paste("00", cnd.raw$id, s
 ```{r NDFS function}
 nfmal <- function(mal=NULL, k=1) {
   freq <- 1 - mal
-  # adapted moph
+  # adapted morph
   min.RSS <- function(data, par) {
               with(data, sum(( (par[1] / (1 - ((par[2] - par[1])/par[2]) * exp((-1) * k * x))) - y)^2))
   }
@@ -46,14 +46,9 @@ nfmal <- function(mal=NULL, k=1) {
   freqs <- seq(0, 1, .01)
   ws.ad <-  (pars.ad[1] / (1 - ((pars.ad[2] - pars.ad[1])/pars.ad[2]) * exp((-1) * k * freqs)))
   
-  # plot(freqs, ws.ad)
-  
   # maladapted morph
-  
   ws.mal <- rev(ws.ad) - .35 
-  
   raw <- (ws.ad * freqs) + (ws.mal * (1 - freqs))
-  
   min.w <- min(raw)
   max.w <- max(raw - min.w)
   
@@ -607,11 +602,6 @@ summary(an.s1)
 
 an.sf <- lm(mas ~ host*c.mal + host*c.no_art_5 + c.mal*c.no_tim + c.con_art5, data=n1[n1$no_art_5 > 2 & n1$no_tim > 0, ])
 summary(an.sf)
-
-## neg freq dep mal
-#an.sf <- lm(mas ~ host*c.nf_mal_k2.0 + host*c.no_art_5 + c.nf_mal_k2.0*c.no_tim + c.con_art5, data=n1[n1$no_art_5 > 2 & n1$no_tim > 0, ])
-#summary(an.sf)
-###
 
 an1 <- lm(mai1 ~ host*c.mal + host*c.no_art_5 + c.mal*c.no_tim, data=n1[n1$no_art_5 > 2 & n1$no_tim > 0, ])
 summary(an1)
